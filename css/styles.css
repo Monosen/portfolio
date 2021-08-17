@@ -354,6 +354,15 @@ p {
   z-index: 1;
 }
 
+.red-social {
+  margin-right: 1rem;
+}
+
+.red-social:last-of-type{
+  margin-right: 0;
+}
+
+
 
 /* hero */
 
@@ -555,7 +564,7 @@ p {
   height: 10rem;
   border-radius: 50%;
   margin: auto;
-  animation: eyePupil 4s linear infinite alternate;
+  animation: eyePupil 7s ease-in-out 2s infinite;
   position: relative;
 }
 
@@ -563,26 +572,49 @@ p {
   0% {
     left: 0;
   }
-
-  20% {
+  10% {
     left: -3rem;
-    top: 0;
+    /* top: 0; */
   }
-  40% {
+  20% {
     left: -3rem;
     top: -1rem;
   }
-  60% {
+  30% {
     left: -3rem;
-    top: 0;
+    /* top: 0; */
   }
-  80% {
+  40% {
     left: -3rem;
     top: 1rem;
   }
-  100%{
+  50%{
     top: 0;
     left: 0;
+  }
+  60%{
+    left: -3rem;
+    top: 3rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  70%{
+    left: 3rem;
+    top: 3rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  80%{
+    left: 0rem;
+    top: 0rem;
+    width: 10rem;
+    height: 10rem;
+  }
+  90%{
+    top: -3rem;
+  }
+  100%{
+    top: 0;
   }
 }
 
@@ -600,7 +632,6 @@ p {
 .eye::before {
   content: "";
   background: url(../img/ojo-last.svg) no-repeat;
-  stroke: #a162e8;
   position: absolute;
   height: 1rem;
   width: 2.4rem;
@@ -612,7 +643,6 @@ p {
 .eye:hover::before {
   opacity: 1;
 }
-
 
 .eye-one::before {
   content: "";
@@ -630,7 +660,7 @@ p {
 	width: 2rem;
 	height: 2rem;
 	background: white;
-	border-radius: 55%;
+	border-radius: 50%;
 }
 
 .eye .eyes::before {
@@ -648,6 +678,11 @@ p {
 }
 
 .eye .eyes:hover::before {
+	width: 1.3rem;
+	height: 1.3rem;
+}
+
+.eye .eyes-one::before {
 	width: 1.3rem;
 	height: 1.3rem;
 }
@@ -798,7 +833,7 @@ p {
 }
 
 .margin-top-one {
-  margin-top: 11rem;
+  margin-top: 13rem;
 }
 
 @media (min-width: 992px) {
@@ -1083,6 +1118,7 @@ p {
 }
 
 .bottom {
+  cursor: pointer;
   height: 4rem;
   width: 10rem;
   font-family: var(--fuenteTwo);
@@ -1157,5 +1193,150 @@ p {
   100% {
     width: 4rem;
     height: 4rem;
+  }
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+.wip-header{
+  background: linear-gradient(180deg,#111 20%,rgba(20,44,105,0) 60%),#1a1a1a;
+  padding: 13rem 0 5rem 0;
+}
+
+.wip-container {
+  max-width: 70rem;
+}
+
+.wip-title {
+  letter-spacing: -0.15rem;
+  line-height: 110%;
+  font-size: 5.5rem;
+}
+
+.wip-text {
+  line-height: 1.7;
+  font-size: 1.8rem;
+  opacity: 0.8;
+  margin-top: 3rem;
+}
+
+@media (min-width: 576px) {
+  .wip-title {
+    font-size: 6.2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .wip-title {
+    font-size: 6.9rem;
+  }
+
+  .wip-header{
+    padding: 22rem 0 15rem 0;
+  }
+}
+
+.wip-box-date {
+  align-items: center;
+  padding: 3rem 0;
+  margin: 7rem 0;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+} 
+
+.wip-img {
+  margin-left: 3rem;
+}
+
+.wip-date {
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-family: var(--fuenteTwo);
+  margin-left: 1rem;
+}
+
+.wip-public-container {
+  max-width: 740px;
+}
+
+.wip-information {
+  margin-left: 3rem;
+}
+
+.wip-info-title {
+  font-size: 3.4rem;
+  line-height: 120%;
+  letter-spacing: -1px;
+  font-family: var(--fuenteOne);
+  margin: 0 0 0.5rem 0;
+}
+
+.wip-info-subTitle {
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--fuenteTwo);
+  margin: 1rem 0 0 0;
+  opacity: 0.7;
+}
+
+.wip-info-text {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  opacity: 0.8;
+  margin-top: 3rem;
+}
+
+.wip-information img {
+  max-width: 100%;
+  margin: 3rem 0;
+  border-radius: 2rem;
+}
+
+.wip-info-link a {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  position: relative;
+}
+
+.wip-info-link a::before {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  background-color: #444;
+  height: 0.3rem;
+  width: 100%;
+  border-radius: 10rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.wip-info-link a:hover::before {
+  height: 0.5rem;
+  width: 100%;
+}
+
+.wip-icon{
+  position: relative;
+}
+
+.wip-icon::before {
+  content: '';
+  position: absolute;
+  left: 49%;
+  bottom: -5rem;
+  background-color: #444;
+  height: 100%;
+  width: 1px;
+  border-radius: 10rem;
+  margin: 0 auto;
+}
+@media (min-width: 576px) {  
+  .wip-container-two {
+    max-width: 100%;
   }
 }
