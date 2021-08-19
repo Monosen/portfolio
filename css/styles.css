@@ -564,17 +564,18 @@ p {
   height: 10rem;
   border-radius: 50%;
   margin: auto;
-  animation: eyePupil 7s ease-in-out 2s infinite;
+  animation: eyePupil 8s ease-in-out 2s infinite;
   position: relative;
 }
 
 @keyframes eyePupil {
   0% {
+    top: 0;
     left: 0;
   }
   10% {
     left: -3rem;
-    /* top: 0; */
+    top: 0;
   }
   20% {
     left: -3rem;
@@ -582,7 +583,7 @@ p {
   }
   30% {
     left: -3rem;
-    /* top: 0; */
+    top: 0;
   }
   40% {
     left: -3rem;
