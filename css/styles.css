@@ -700,8 +700,8 @@ p {
 
 .background {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	background-color: var(--fondoTwo);
 	max-width: 100%;
 	max-height: 100%;
@@ -710,20 +710,11 @@ p {
 	min-height: 40vh;
 	transition: all 0.3s;
 	top: 0;
-	padding: 5rem;
+	padding: 2rem;
 }
 
 .background:hover {
 	top: -1rem;
-}
-
-.background span,
-.background h2 {
-	position: absolute;
-	text-align: left;
-	min-width: 100%;
-	left: 4%;
-	top: 6rem;
 }
 
 .background span {
@@ -739,32 +730,21 @@ p {
 	font-family: var(--fuenteOne);
 	font-size: 4.5rem;
 	letter-spacing: -0.1rem;
+	margin-top: 2rem;
 }
 
 .background-img {
 	text-align: center;
-	max-width: 100%;
-	max-height: 100%;
-	margin-top: 13rem;
 }
 
 .img-hs {
-	max-width: 50%;
+	width: 100%;
+	border-radius: 15px;
 }
 
 @media (min-width: 576px) {
-	.background span,
-	.background h2 {
-		text-align: right;
-		left: -3%;
-	}
-
 	.background {
-		min-height: 88vh;
-	}
-
-	.img-hs {
-		max-width: 28rem;
+		padding: 5rem;
 	}
 
 	.margin-top {
@@ -772,19 +752,9 @@ p {
 	}
 }
 
-@media (min-width: 992px) {
-	.background-img {
-		margin-top: 0;
-	}
-
-	.img-hs {
-		max-width: 28rem;
-	}
-}
-
 @media (min-width: 1200px) {
 	.img-hs {
-		max-width: 28rem;
+		width: 75%;
 	}
 }
 
@@ -1337,4 +1307,24 @@ p {
 	.wip-container-two {
 		max-width: 100%;
 	}
+}
+
+.box-icon-dev {
+	margin-top: 1rem;
+	display: flex;
+}
+
+.box-icon-dev .icon-bg {
+	background-color: var(--white);
+	border-radius: 50%;
+	height: 5rem;
+	width: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 0.4rem;
+}
+
+.box-icon-dev .icon-bg img {
+	width: 30px;
 }
