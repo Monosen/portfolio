@@ -1328,3 +1328,20 @@ p {
 .box-icon-dev .icon-bg img {
 	width: 30px;
 }
+
+.text-role-dev {
+	font-size: 2rem;
+	margin-left: 1.8rem;
+}
+
+.container-icon {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	max-width: 580px;
+}
+
+@media (min-width: 576px) {
+	.container-icon {
+		grid-template-columns: repeat(8, 1fr);
+	}
+}
