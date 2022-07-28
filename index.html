@@ -38,6 +38,18 @@
     ></script>
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Edinson Bolaños</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pink: '#ffc4ff'
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="preload">
@@ -57,7 +69,7 @@
           </div>
         </a>
       </div>
-      <div class="container">
+      <div class="w-11/12 mx-auto xl:max-w-[80%]">
         <div class="display-flex order">
           <div class="display-none z-index">
             <div id="hamburger">
@@ -100,7 +112,7 @@
     </nav>
 
     <section>
-      <div class="container">
+      <div class="w-11/12 mx-auto xl:max-w-[80%]">
         <div class="display-flex-one display-flex-two">
           <div class="flex-amount text">
             <h1 class="text-rgb">
@@ -135,7 +147,7 @@
     </section>
 
     <div class="margin-top">
-      <div class="container">
+      <div class="w-11/12 mx-auto xl:max-w-[80%]">
         <div class="grid">
           <!-- ToDo Full-->
           <a
@@ -252,23 +264,26 @@
       </div>
     </div>
 
-    <footer>
-      <div class="container">
-        <div class="footer-center">
-          <div class="text-align-center">
-            <h3 class="text-rgb-two text-size">
-              De vez en cuando acepto oportunidades como autónomo.
-            </h3>
-            <p class="footer-text">
-              ¿Tiene un proyecto interesante en el que necesita ayuda?
-              <span
-                >Envíame un mensaje y
-                <a class="footer-link" href="./contact.html"
-                  ><span>charlemos.</span></a
-                ></span
-              >
-            </p>
-          </div>
+    <footer class="w-11/12 mx-auto xl:max-w-[80%]">
+      <div class="mx-auto py-96 m-width max-w-[700px]">
+        <div class="text-center">
+          <h3
+            class="text-[5.2rem] tracking-[-0.15rem] text-[4rem] bg-gradient-{271deg, #a0e9ff 30%, #a162e8 50%, #f093b0 70%, #edca85 94%} bg-clip-text text-transparent m-0 bg-gradient-to-r from-cyan-500 to-blue-500"
+          >
+            De vez en cuando acepto oportunidades como autónomo.
+          </h3>
+          <p class="mt-12 text-[2rem] leading-[160%]">
+            ¿Tiene un proyecto interesante en el que necesita ayuda?
+            <span
+              >Envíame un mensaje y
+              <a class="relative" href="./contact.html"
+                ><span
+                  class="after:content-[''] after:bg-pink after:absolute after:left-0 after:bottom-[-0.7rem] after:w-full after:h-[0.4rem] after:rounded-2xl"
+                  >charlemos.</span
+                ></a
+              ></span
+            >
+          </p>
         </div>
       </div>
     </footer>
