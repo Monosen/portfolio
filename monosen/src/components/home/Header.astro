@@ -1,0 +1,303 @@
+<section>
+  <div class="container">
+    <div class="display-flex-one display-flex-two">
+      <div class="flex-amount text">
+        <h1 class="text-rgb">
+          Hola. Yo Soy Edinson. Un
+          <span class="display-block">Desarrollador.</span>
+        </h1>
+        <p>
+          Yo soy edinson un desarrollador Full-Stack apasionado por la
+          Programacion.
+        </p>
+      </div>
+      <div class="flex-amount">
+        <div class="container-img">
+          <div class="box-logo-eye">
+            <div class="background-eye">
+              <div class="tabs-box">
+                <div class="tabs tabs-one"></div>
+                <div class="tabs tabs-two"></div>
+                <div class="tabs tabs-three"></div>
+              </div>
+              <div class="eye-pupil"></div>
+            </div>
+            <div class="box-img"></div>
+            <div class="box-img box-img-one"></div>
+            <div class="box-img box-img-two"></div>
+            <div class="box-img box-img-three"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    margin-top: 23rem;
+  }
+
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .display-flex-one {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .display-flex-two {
+      min-height: 100rem;
+    }
+  }
+
+  .flex-amount {
+    flex-basis: calc(50%);
+  }
+
+  .text {
+    padding-top: 9.5rem;
+  }
+
+  .display-block {
+    display: block;
+  }
+
+  .flex-amount {
+    flex-basis: calc(50%);
+  }
+
+  .container-img {
+    display: flex;
+    align-items: center;
+  }
+
+  .box-logo-eye {
+    display: flex;
+    align-items: center;
+    background-color: var(--fondoTwo);
+    min-height: 40rem;
+    width: 100%;
+    border-radius: 5%;
+    margin: auto;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .box-logo-eye {
+      width: 80%;
+      min-height: 45vh;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .box-logo-eye {
+      width: 100%;
+      min-height: 50vh;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .box-logo-eye {
+      height: 55rem;
+      width: 55rem;
+    }
+  }
+
+  .background-eye {
+    display: flex;
+    background-color: var(--white);
+    width: 26rem;
+    height: 17rem;
+    border-radius: 50%;
+    margin: auto;
+    animation: backgroundEye 4s linear infinite;
+  }
+
+  .tabs-box {
+    position: absolute;
+    left: 46%;
+  }
+
+  .tabs-box-one {
+    position: relative;
+    left: 50%;
+  }
+
+  .tabs {
+    position: absolute;
+    top: -8rem;
+    margin: 0;
+    height: 7rem;
+    width: 1.8rem;
+    border-radius: 10rem;
+  }
+
+  .tabs-one {
+    left: -9rem;
+    background-color: #ffffff;
+    transform: rotate(-40deg);
+  }
+
+  .tabs-two {
+    top: -10rem;
+    background-color: #ffffff;
+  }
+
+  .tabs-three {
+    left: 9rem;
+    transform: rotate(40deg);
+    background-color: #ffffff;
+  }
+
+  .eye-pupil {
+    background-color: var(--black);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin: auto;
+    animation: eyePupil 8s ease-in-out 2s infinite;
+    position: relative;
+  }
+
+  @keyframes eyePupil {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    10% {
+      left: -3rem;
+      top: 0;
+    }
+    20% {
+      left: -3rem;
+      top: -1rem;
+    }
+    30% {
+      left: -3rem;
+      top: 0;
+    }
+    40% {
+      left: -3rem;
+      top: 1rem;
+    }
+    50% {
+      top: 0;
+      left: 0;
+    }
+    60% {
+      left: -3rem;
+      top: 3rem;
+      width: 8rem;
+      height: 8rem;
+    }
+    70% {
+      left: 3rem;
+      top: 3rem;
+      width: 8rem;
+      height: 8rem;
+    }
+    80% {
+      left: 0rem;
+      top: 0rem;
+      width: 10rem;
+      height: 10rem;
+    }
+    90% {
+      top: -3rem;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+  .text-rgb,
+  .text-rgb-two,
+  .text-rgb-three {
+    font-size: 5.2rem;
+    letter-spacing: -0.15rem;
+    background-image: linear-gradient(
+      271deg,
+      #a0e9ff 30%,
+      #a162e8 50%,
+      #f093b0 70%,
+      #edca85 94%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0;
+  }
+
+  .text-rgb:hover {
+    animation: move 35s linear infinite;
+  }
+
+  @keyframes move {
+    to {
+      background-position: 4500vh;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .text-rgb {
+      font-size: 7.7rem;
+    }
+  }
+
+  .text p {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 1400px) {
+    .text {
+      padding-top: 7.5rem;
+    }
+
+    .text-rgb {
+      font-size: 9.7rem;
+    }
+
+    .box-img {
+      position: absolute;
+      top: -12rem;
+      left: -12rem;
+      height: 12rem;
+      width: 12rem;
+      border-radius: 15%;
+      background: linear-gradient(180deg, #edca85, #f093b0);
+    }
+
+    .box-img-one {
+      left: 55rem;
+      background: linear-gradient(180deg, #b097f2, #a0e9ff);
+    }
+
+    .box-img-two {
+      top: 55rem;
+      background: linear-gradient(180deg, #db85b4, #b097f2);
+    }
+
+    .box-img-three {
+      top: 55rem;
+      left: 55rem;
+      background: linear-gradient(180deg, #edca85, #f093b0);
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .box-img {
+      display: none;
+    }
+  }
+</style>
