@@ -1,0 +1,41 @@
+<div class="margin-top">
+  <div class="container">
+    <div class="grid">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  .margin-top {
+    margin-top: 10rem;
+  }
+
+  @media (min-width: 576px) {
+    .margin-top {
+      margin-top: 3rem;
+    }
+  }
+
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+
+  .grid {
+    display: grid;
+    row-gap: 10rem;
+  }
+
+  @media (min-width: 992px) {
+    .grid {
+      margin-top: 0;
+    }
+  }
+</style>
