@@ -1,0 +1,328 @@
+---
+import { StackIcons } from "./StackIcons";
+---
+
+<nav class="position-fixed nav-color">
+  <div class="eye-move">
+    <a href="index.html">
+      <div class="face">
+        <div class="eye">
+          <div class="eyes"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="container">
+    <div class="display-flex order">
+      <div class="display-none z-index">
+        <div id="hamburger">
+          <button>
+            <span class="top-line"></span>
+            <span class="middle-line"></span>
+            <span class="bottom-line"></span>
+          </button>
+        </div>
+      </div>
+      <ul class="display-none-two nav-list">
+        <li class="padding">
+          <a href="index.html">inicio</a>
+        </li>
+        <li>
+          <a href="about.html">sobre mi</a>
+        </li>
+        <li>
+          <a href="contact.html">contacto</a>
+        </li>
+      </ul>
+      <div class="link-social">
+        <a
+          class="red-social"
+          href="https://www.linkedin.com/in/edinson-david-bola%C3%B1os-perdomo-293624212/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a class="red-social" href="https://github.com/Monosen" target="_blank">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <StackIcons />
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const nav = document.querySelector("#hamburger button");
+  const navMenu = document.querySelector(".nav-list");
+  nav!.addEventListener("click", () => {
+    nav!.classList.toggle("open");
+    navMenu!.classList.toggle("nav-completo");
+  });
+</script>
+
+<style>
+  .position-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .nav-color {
+    background-color: var(--fondo);
+  }
+
+  .eye-move {
+    position: absolute;
+    width: 100%;
+    top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+
+  .display-flex {
+    display: flex;
+  }
+
+  .display-flex ul li,
+  .display-flex ul li a {
+    display: inline-block;
+  }
+
+  .display-flex ul li a {
+    color: var(--white);
+    font-size: 1.8rem;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .display-flex ul li a:hover {
+    color: var(--pink);
+  }
+
+  .display-flex ul li a::after {
+    content: "";
+    background-color: var(--pink);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.8rem);
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transform: rotate(359deg);
+  }
+
+  .display-flex ul li a:hover::after {
+    opacity: 0.8;
+  }
+
+  .display-flex ul li {
+    padding: 3rem 3.7rem;
+  }
+
+  @media (min-width: 768px) {
+    .display-flex ul li {
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .display-flex ul li {
+      padding: 3rem 2.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .display-flex ul li {
+      padding: 3rem 3.2rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .display-flex ul li {
+      padding: 3rem 3.7rem;
+    }
+  }
+
+  .order {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .display-none {
+      display: none;
+    }
+  }
+
+  .z-index {
+    z-index: 20;
+  }
+
+  #hamburger button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    width: 6rem;
+    height: 6rem;
+    outline: none;
+  }
+
+  #hamburger button span {
+    border-radius: 0.5rem;
+    background: white;
+    display: block;
+    width: 60%;
+    margin: 0.5rem auto;
+    height: 0.2rem;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  #hamburger button.open .top-line {
+    animation-name: top-line-animation;
+  }
+
+  #hamburger button.open .middle-line {
+    animation-name: middle-line-animation;
+  }
+
+  #hamburger button.open .bottom-line {
+    animation-name: bottom-line-animation;
+  }
+
+  #hamburger button .top-line {
+    animation-name: top-line-animation-close;
+  }
+
+  #hamburger button .middle-line {
+    animation-name: middle-line-animation-close;
+  }
+
+  #hamburger button .bottom-line {
+    animation-name: bottom-line-animation-close;
+  }
+
+  @keyframes top-line-animation {
+    50%,
+    100% {
+      margin: 0 auto;
+      transform: translateY(2px) rotate(-45deg);
+    }
+  }
+
+  @keyframes bottom-line-animation {
+    50%,
+    100% {
+      margin: 0 auto;
+      transform: translateY(-2px) rotate(45deg);
+    }
+  }
+
+  @keyframes middle-line-animation {
+    20%,
+    100% {
+      margin: 0 auto;
+      width: 0;
+      opacity: 0;
+    }
+  }
+
+  @keyframes top-line-animation-close {
+    0% {
+      margin: 0 auto;
+      transform: translateY(2px) rotate(-45deg);
+    }
+
+    50%,
+    100% {
+      margin: 5px auto;
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+
+  @keyframes middle-line-animation-close {
+    0% {
+      margin: 0 auto;
+      width: 0;
+      opacity: 0;
+    }
+
+    20%,
+    100% {
+      margin: 0 auto;
+      width: 60%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes bottom-line-animation-close {
+    0% {
+      margin: 0 auto;
+      transform: translateY(-2px) rotate(45deg);
+    }
+
+    50%,
+    100% {
+      margin: 0 auto;
+      transform: translateY(5px) rotate(0deg);
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .display-none-two {
+      display: none;
+    }
+
+    .nav-completo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background: #a162e8;
+      height: 100vh;
+      z-index: 10;
+      overflow-y: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .padding {
+      padding-left: 0 !important;
+    }
+  }
+
+  .link-social {
+    position: relative;
+    z-index: 1;
+  }
+
+  .red-social {
+    margin-right: 2rem;
+  }
+
+  .red-social:last-of-type {
+    margin-right: 0;
+  }
+</style>
