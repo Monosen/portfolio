@@ -1,0 +1,111 @@
+---
+import { Image } from "@astrojs/image/components";
+import type { Project } from "./Projects";
+import { Icons } from "./Projects";
+import reactIcon from "../../assets/imgs/icon/react-icon.svg";
+
+const { name, type, img, url, icons } = Astro.props as Project;
+---
+
+<a class="background link-ojo" href={url} target="_blank">
+  <span>{type}</span>
+  <h2>{name}</h2>
+  <div class="background-img">
+    <Image
+      src={import(`../../assets/imgs/project/${img}`)}
+      alt={name}
+      aspectRatio={16 / 9}
+      width={900}
+    />
+  </div>
+  <section class="box-icon-dev">
+    {
+      Icons.map(
+        (icon) =>
+          icons.includes(icon.name.toLowerCase()) && (
+            <div class="icon-bg">
+              <img src={icon.icon} alt={name} />
+            </div>
+          )
+      )
+    }
+  </section>
+</a>
+
+<style>
+  .background {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--fondoTwo);
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 3rem;
+    position: relative;
+    min-height: 40vh;
+    transition: all 0.3s;
+    top: 0;
+    padding: 2rem;
+  }
+
+  .background:hover {
+    top: -1rem;
+  }
+
+  .background span {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    opacity: 0.6;
+    font-weight: 700;
+    font-family: var(--fuenteTwo);
+  }
+
+  .background h2 {
+    font-family: var(--fuenteOne);
+    font-size: 4.5rem;
+    letter-spacing: -0.1rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 576px) {
+    .background {
+      padding: 5rem;
+    }
+  }
+
+  .background-img {
+    text-align: center;
+  }
+
+  .box-icon-dev {
+    margin-top: 1rem;
+    display: flex;
+  }
+
+  .box-icon-dev .icon-bg {
+    background-color: var(--white);
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.4rem;
+  }
+
+  .box-icon-dev .icon-bg img {
+    width: 30px;
+  }
+
+  .img-hs {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  @media (min-width: 1200px) {
+    .img-hs {
+      width: 65%;
+    }
+  }
+</style>

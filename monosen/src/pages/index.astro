@@ -2,11 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/home/Header.astro";
 import ProjectLayout from "../layouts/ProjectLayout.astro";
+import Card from "../components/home/Card.astro";
+import { Projects } from "../components/home/Projects";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
-  <ProjectLayout />
+  <ProjectLayout>
+    {Projects.map((project) => <Card {...project} />)}
+  </ProjectLayout>
 </Layout>
 
 <style>
