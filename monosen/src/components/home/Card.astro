@@ -14,8 +14,7 @@ const { name, type, img, url, icons } = Astro.props as Project;
     <Image
       src={import(`../../assets/imgs/project/${img}`)}
       alt={name}
-      aspectRatio={16 / 9}
-      width={900}
+      class={"img-hs"}
     />
   </div>
   <section class="box-icon-dev">
@@ -100,12 +99,17 @@ const { name, type, img, url, icons } = Astro.props as Project;
 
   .img-hs {
     width: 100%;
+    height: 100%;
     border-radius: 15px;
   }
-
-  @media (min-width: 1200px) {
+  /* @media (min-width: 1200px) {
     .img-hs {
-      width: 65%;
+    }
+  } */
+
+  @media (min-width: 1400px) {
+    .img-hs {
+      width: 1000px;
     }
   }
 </style>

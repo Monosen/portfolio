@@ -280,6 +280,7 @@
 
     .box-img-one {
       left: 55rem;
+      display: none;
       background: linear-gradient(180deg, #b097f2, #a0e9ff);
     }
 
@@ -291,7 +292,18 @@
     .box-img-three {
       top: 55rem;
       left: 55rem;
+      display: none;
       background: linear-gradient(180deg, #edca85, #f093b0);
+    }
+  }
+
+  @media (min-width: 1480px) {
+    .box-img-one {
+      display: block;
+    }
+
+    .box-img-three {
+      display: block;
     }
   }
 
