@@ -1,7 +1,41 @@
 ---
+import { Form } from "../components/contact/Form";
+import Header from "../components/contact/Header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Contact" />
+<Layout title="Contact">
+  <section class="margin-top-one container">
+    <div class="col-md-6">
+      <Header />
+      <Form />
+    </div>
+  </section>
+</Layout>
 
-<style is:global></style>
+<style>
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+
+  .margin-top-one {
+    margin-top: 13rem;
+  }
+
+  @media (min-width: 1200px) {
+    .margin-top-one {
+      margin-top: 26rem;
+    }
+  }
+
+  .col-md-6 iframe {
+    width: 100%;
+  }
+</style>
