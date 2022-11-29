@@ -1,0 +1,62 @@
+---
+import { Image } from "@astrojs/image/components";
+import type { Book } from "./Books";
+
+const { title, author, img } = Astro.props as Book;
+---
+
+<div class="book-box">
+  <div class="book-img text-align-center">
+    <Image
+      src={import(`../../assets/imgs/${img}`)}
+      alt={title}
+      height={500}
+      width={500}
+    />
+  </div>
+  <span class="book-title">{title}</span>
+  <span class="book-text">{author}</span>
+</div>
+
+<style>
+  .book-box {
+    margin-bottom: 8rem;
+  }
+
+  .book-box:last-child {
+    margin-bottom: 0rem;
+  }
+
+  .book-img {
+    filter: grayscale(1);
+  }
+
+  .book-img img {
+    height: 25rem;
+    width: 20rem;
+  }
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  .book-title {
+    color: var(--white);
+    font-size: 1.8rem;
+    display: block;
+    max-width: 20rem;
+    margin: auto;
+    margin-top: 1rem;
+    font-family: var(--fuenteTwo);
+  }
+
+  .book-text {
+    color: var(--white);
+    font-size: 1.4rem;
+    display: block;
+    max-width: 20rem;
+    margin: auto;
+    margin-top: 0.5rem;
+    font-family: var(--fuenteTwo);
+  }
+</style>

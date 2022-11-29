@@ -1,0 +1,38 @@
+<section>
+  <div class="container-two">
+    <h2 class="text-two">Actualmente leyendo</h2>
+    <div class="books-boxs">
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .container-two {
+    width: 90%;
+    margin: auto;
+    margin-top: 10rem;
+  }
+
+  @media (min-width: 992px) {
+    .container-two {
+      width: 80%;
+    }
+  }
+
+  .text-two {
+    font-size: 3.5rem;
+    line-height: 150%;
+  }
+
+  .books-boxs {
+    margin-top: 4rem;
+  }
+
+  @media (min-width: 992px) {
+    .books-boxs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

@@ -1,0 +1,149 @@
+<section class="container-two">
+  <h2 class="text-two">Una breve historia</h2>
+  <div class="story-box">
+    <div class="story-box-grid">
+      <div class="story-box-small grid-two">
+        <div class="display-flex">
+          <div class="box-information-flex-text">
+            <span class="text-company">Técnico en Sistemas</span>
+            <span class="text-role">Sena</span>
+          </div>
+          <div class="box-information-flex-item">
+            <p class="number">18-20</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-box-small grid-three">
+        <div class="box-information-flex display-flex">
+          <div class="box-information-flex-text">
+            <span class="text-company">Ingeniera de Sistemas</span>
+            <span class="text-role">Universidad Santiago de Cali</span>
+          </div>
+          <div class="box-information-flex-item">
+            <p class="number">20~</p>
+          </div>
+        </div>
+      </div>
+      <div class="story-box-small grid-four">
+        <div>
+          <div class="display-flex">
+            <div class="box-information-flex-text">
+              <span class="text-company">Desarrollador Web Full-Stack</span>
+              <span class="text-role">Academlo</span>
+            </div>
+            <div class="box-information-flex-item">
+              <p class="number">21-22</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .container-two {
+    width: 90%;
+    margin: auto;
+    margin-top: 10rem;
+  }
+
+  @media (min-width: 992px) {
+    .container-two {
+      width: 80%;
+    }
+  }
+
+  .text-two {
+    font-size: 3.5rem;
+    line-height: 150%;
+  }
+
+  .story-box {
+    height: 37rem;
+    width: 100%;
+    margin: auto;
+  }
+
+  .story-box-grid {
+    display: grid;
+    row-gap: 2rem;
+  }
+
+  @media (min-width: 992px) {
+    .story-box-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      /* grid-template-rows: repeat(4, 1fr); */
+      row-gap: 1rem;
+    }
+  }
+
+  .story-box-small {
+    background: #222;
+    border-radius: 2rem;
+    padding: 3rem;
+  }
+
+  @media (min-width: 992px) {
+    .grid-two {
+      grid-column: 1 / span 4;
+      grid-row: 3 / 3;
+    }
+
+    .grid-three {
+      grid-column: 5 / span 8;
+      grid-row: 2 / 2;
+    }
+
+    .grid-four {
+      grid-column: 5 / span 8;
+      grid-row: 1 / 1;
+    }
+
+    .books-boxs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .box-information-flex-text {
+    flex-basis: 70%;
+  }
+
+  .box-information-flex-item {
+    flex-basis: 30%;
+    text-align: end;
+    align-self: center;
+  }
+
+  .number {
+    font-size: 2.2rem;
+    margin: 0;
+  }
+
+  .box-information-flex-text span {
+    color: var(--white);
+    display: block;
+    font-family: var(--fuenteTwo);
+  }
+
+  .display-flex {
+    display: flex;
+  }
+
+  @media (min-width: 992px) {
+    .display-flex-one {
+      display: flex;
+    }
+  }
+
+  .text-company {
+    font-size: 1.8rem;
+  }
+
+  .text-role {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+</style>

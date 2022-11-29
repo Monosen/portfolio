@@ -1,0 +1,19 @@
+---
+import Header from "../components/about/Header.astro";
+import History from "../components/about/History.astro";
+import BookLayout from "../layouts/BookLayout.astro";
+import Layout from "../layouts/Layout.astro";
+
+import { books } from "../components/about/Books";
+import Book from "../components/about/Book.astro";
+---
+
+<Layout title="About">
+  <Header />
+  <History />
+  <BookLayout>
+    {books.map((book) => <Book {...book} />)}
+  </BookLayout>
+</Layout>
+
+<style is:global></style>

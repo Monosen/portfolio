@@ -1,0 +1,133 @@
+---
+import { Image } from "@astrojs/image/components";
+---
+
+<section class="margin-top-one">
+  <div class="container-two">
+    <div class="text-align-center display-flex-twree">
+      <Image
+        class={"img-small"}
+        src={import("../../assets/imgs/img-580px-two.png")}
+        alt="Edinson"
+      />
+      <div class="information">
+        <h1 class="my-title">
+          Yo soy edinson un desarrollador Full-Stack apasionado por la
+          Programacion.
+        </h1>
+        <p class="my-text">
+          Soy una persona con un alto nivel de compromiso, apasionada por el
+          desarrollo de software y con alta responsabilidad, proactiva que
+          Disfruta trabajando en equipo. Con la voluntad de aprender siempre
+          nuevas cosas e implementar nuevas soluciones para un desarrollo Mas
+          eficiente.
+        </p>
+        <p class="my-text">
+          Me gusta desarrollar software que siga las buenas practicas, que Sea
+          escalable, sostenible y de fácil entendimiento.
+        </p>
+        <p class="my-text">
+          Me gusta hacer deporte, resolver ejercicios de programación, aprender
+          nuevas cosas.
+        </p>
+        <a
+          class="bottom bottom-download"
+          download="Cv-Edinson-Bolaños"
+          href="../../assets/docs/cv.pdf">Descargar Cv</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .margin-top-one {
+    margin-top: 13rem;
+  }
+
+  @media (min-width: 1200px) {
+    .display-flex-twree {
+      display: flex;
+      justify-content: center;
+    }
+
+    .information {
+      margin-left: 5rem;
+    }
+
+    .my-title {
+      margin-top: 0;
+    }
+
+    .margin-top-one {
+      margin-top: 26rem;
+    }
+  }
+
+  .my-title {
+    max-width: 580px;
+    font-size: 3.5rem;
+    text-align: start;
+    margin: auto;
+    margin-top: 3rem;
+  }
+
+  .container-two {
+    width: 90%;
+    margin: auto;
+    margin-top: 10rem;
+  }
+
+  @media (min-width: 992px) {
+    .container-two {
+      width: 80%;
+    }
+  }
+
+  .text-align-center {
+    text-align: center;
+  }
+
+  .img-small {
+    height: 100%;
+    max-width: 100%;
+    border-radius: 2rem;
+  }
+
+  .bottom {
+    cursor: pointer;
+    height: 4rem;
+    width: 10rem;
+    font-family: var(--fuenteTwo);
+    font-size: 1.9rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--white);
+    border-right: 1px solid var(--white);
+    margin-bottom: 5rem;
+  }
+
+  .bottom-download {
+    margin: 2rem auto 0 0;
+    display: block;
+    transition: all 0.2s ease-in-out;
+
+    width: 18rem;
+  }
+
+  .bottom-download:hover {
+    border-bottom: var(--pink) solid 2px;
+    border-right: var(--pink) solid 2px;
+    padding-left: 2rem;
+  }
+
+  .my-text {
+    max-width: 580px;
+    text-align: start;
+    font-size: 1.8rem;
+    opacity: 0.9;
+    margin: auto;
+    margin-top: 3.5rem;
+    line-height: 3.2rem;
+  }
+</style>
