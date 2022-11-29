@@ -43,24 +43,6 @@
     margin: auto;
   }
 
-  @media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .display-flex-one {
-      display: flex;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .display-flex-two {
-      min-height: 100rem;
-    }
-  }
-
   .flex-amount {
     flex-basis: calc(50%);
   }
@@ -91,27 +73,6 @@
     border-radius: 5%;
     margin: auto;
     position: relative;
-  }
-
-  @media (min-width: 768px) {
-    .box-logo-eye {
-      width: 80%;
-      min-height: 45vh;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .box-logo-eye {
-      width: 100%;
-      min-height: 50vh;
-    }
-  }
-
-  @media (min-width: 1400px) {
-    .box-logo-eye {
-      height: 55rem;
-      width: 55rem;
-    }
   }
 
   .background-eye {
@@ -239,6 +200,10 @@
     margin: 0;
   }
 
+  .text p {
+    font-size: 2rem;
+  }
+
   .text-rgb:hover {
     animation: move 35s linear infinite;
   }
@@ -252,11 +217,44 @@
   @media (min-width: 768px) {
     .text-rgb {
       font-size: 7.7rem;
+      line-height: 8rem;
+    }
+
+    .display-flex-two {
+      min-height: 100rem;
+    }
+
+    .box-logo-eye {
+      width: 80%;
+      min-height: 45vh;
     }
   }
 
-  .text p {
-    font-size: 2rem;
+  @media (max-width: 991.98px) {
+    .box-img {
+      display: none;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .display-flex-one {
+      display: flex;
+    }
+
+    .box-logo-eye {
+      width: 100%;
+      min-height: 50vh;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+
+    .text-rgb {
+      font-size: 7.7rem;
+      line-height: 9.5rem;
+    }
   }
 
   @media (min-width: 1400px) {
@@ -305,11 +303,10 @@
     .box-img-three {
       display: block;
     }
-  }
 
-  @media (max-width: 991.98px) {
-    .box-img {
-      display: none;
+    .box-logo-eye {
+      height: 55rem;
+      width: 55rem;
     }
   }
 </style>
