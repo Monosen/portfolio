@@ -1,5 +1,8 @@
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+
 import "./Form.style.scss";
+import { useRef } from "react";
 
 type Inputs = {
   name: string;
@@ -9,14 +12,29 @@ type Inputs = {
 };
 
 export const Form = () => {
+  const form = useRef<HTMLFormElement>(null);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSendMessage = async ({ name, email, message, subjet }: Inputs) => {
-    console.log(name, email, message, subjet);
+  const onSendMessage = async (data: Inputs) => {
+    emailjs
+      .sendForm(
+        import.meta.env.PUBLIC_SERVICE_ID,
+        import.meta.env.PUBLIC_TEMPLATE_ID,
+        form.current!,
+        import.meta.env.PUBLIC_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   const isValidEmail = (email: string): boolean => {
@@ -35,6 +53,7 @@ export const Form = () => {
 
   return (
     <form
+      ref={form}
       onSubmit={handleSubmit(onSendMessage)}
       className="form-one text-align-center"
       noValidate
