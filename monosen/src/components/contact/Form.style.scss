@@ -88,17 +88,18 @@
 .text-name,
 .text-name-one {
   position: absolute;
-  bottom: 0.15rem;
+  bottom: -1.8rem;
   left: 0;
   transition: all 0.3s ease;
   color: var(--white);
   font-family: var(--fuenteTwo);
   font-size: 1.9rem;
+  text-transform: capitalize;
 }
 
 .text-name-one {
   bottom: 0;
-  top: 2.6rem;
+  top: 1.5rem;
 }
 
 .form input:focus + .lbl-name .text-name,
@@ -135,4 +136,15 @@
   border-bottom: 1px solid var(--white);
   border-right: 1px solid var(--white);
   margin-bottom: 5rem;
+}
+
+.text-error {
+  color: var(--pink);
+  font-size: 2rem;
+  margin: 0 0 2rem 0;
+  text-transform: capitalize;
+}
+
+.text-error:last-of-type {
+  margin: 0;
 }
