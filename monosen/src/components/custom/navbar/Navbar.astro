@@ -4,7 +4,7 @@ import { StackIcons } from "./StackIcons";
 
 <nav class="position-fixed nav-color">
   <div class="eye-move">
-    <a href="index.html">
+    <a href="/">
       <div class="face">
         <div class="eye">
           <div class="eyes"></div>
@@ -48,6 +48,38 @@ import { StackIcons } from "./StackIcons";
     nav!.classList.toggle("open");
     navMenu!.classList.toggle("nav-completo");
   });
+
+  /* ojo move*/ 
+const eyes = document.querySelectorAll('.eyes')
+
+document.onmousemove = function(event){
+    eyes.forEach((item: any) => {
+        const x = item.offsetLeft + item.clientWidth / 2; // La coordenada x del ojo
+        const y = item.offsetTop + item.clientHeight / 2; // La coordenada y del ojo
+        const rad = Math.atan2(event.pageX - x, (event.pageY - scrollY) - y); // La distancia de coordenadas entre el mouse y el ojo, y luego use la función atan2 para calcular el arco entre el punto y el punto (0, 0)
+        const rot = (rad * (180 / Math.PI) * -1) + 180 - 40; // Convertir a ángulo
+        item.style.transform = 'rotate(' + rot + 'deg)'
+    });
+}
+
+/* animacion de ojo activado*/
+const links = document.querySelectorAll('a');
+const activeEyeLasts = document.querySelector('.eye');
+const activeEyePupil = document.querySelector('.eyes');
+
+
+links.forEach((item: any) => {
+    item.addEventListener('mouseover', () => {
+        activeEyeLasts!.classList.toggle('eye-one');
+        activeEyePupil!.classList.toggle('eyes-one');
+    });
+
+    item.addEventListener('mouseout', () => {
+        activeEyeLasts!.classList.remove('eye-one');
+        activeEyePupil!.classList.remove('eyes-one');
+    });   
+})
+
 </script>
 
 <style>
@@ -69,17 +101,6 @@ import { StackIcons } from "./StackIcons";
     top: 3rem;
     display: flex;
     justify-content: center;
-  }
-
-  .container {
-    max-width: 90%;
-    margin: auto;
-  }
-
-  @media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
   }
 
   .display-flex {
@@ -315,4 +336,72 @@ import { StackIcons } from "./StackIcons";
   .red-social:last-of-type {
     margin-right: 0;
   }
+
+  .eye {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 2rem;
+  background-color: var(--white);
+  border-radius: 55%;
+}
+
+.eye::before {
+  content: '';
+  background: url("../../../assets/imgs/ojo-last.svg") no-repeat;
+  position: absolute;
+  height: 1rem;
+  width: 2.4rem;
+  top: -1.2rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.eye:hover::before {
+  opacity: 1;
+}
+
+.eye-one::before {
+  content: '';
+  background: url("../../../assets/imgs/ojo-last.svg") no-repeat;
+  stroke: #a162e8;
+  position: absolute;
+  height: 1rem;
+  width: 2.4rem;
+  top: -1.2rem;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.eyes {
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  border-radius: 50%;
+}
+
+.eye .eyes::before {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background: #000000;
+  transform: translate(-50%, -50%);
+  position: relative;
+  top: 35%;
+  border-radius: 50%;
+  left: 1.2rem;
+  transition: all 0.1s;
+}
+
+.eye .eyes:hover::before {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.eye .eyes-one::before {
+  width: 1.3rem;
+  height: 1.3rem;
+}
 </style>

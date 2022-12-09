@@ -95,4 +95,15 @@ const { title } = Astro.props;
     font-family: var(--fuenteTwo);
     color: var(--white);
   }
+
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
 </style>
