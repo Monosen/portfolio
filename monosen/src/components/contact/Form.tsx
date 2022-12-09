@@ -1,5 +1,12 @@
 import "./Form.style.scss";
 
+type Inputs = {
+  name: string;
+  email: string;
+  subjet: string;
+  message: string;
+};
+
 export const Form = () => {
   return (
     <form className="form-one text-align-center">

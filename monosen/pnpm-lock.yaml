@@ -9,6 +9,7 @@ specifiers:
   prettier-plugin-astro: ^0.7.0
   react: ^18.0.0
   react-dom: ^18.0.0
+  react-hook-form: ^7.40.0
   react-icons: ^4.6.0
   sass: ^1.56.1
 
@@ -20,6 +21,7 @@ dependencies:
   astro: 1.6.11_sass@1.56.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hook-form: 7.40.0_react@18.2.0
   react-icons: 4.6.0_react@18.2.0
 
 devDependencies:
@@ -2924,6 +2926,15 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-hook-form/7.40.0_react@18.2.0:
+    resolution: {integrity: sha512-0rokdxMPJs0k9bvFtY6dbcSydyNhnZNXCR49jgDr/aR03FDHFOK6gfh8ccqB3fl696Mk7lqh04xdm+agqWXKSw==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-icons/4.6.0_react@18.2.0:
