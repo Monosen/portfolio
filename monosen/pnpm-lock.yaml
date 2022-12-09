@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/image': ^0.11.6
   '@astrojs/react': ^1.2.2
+  '@emailjs/browser': ^3.10.0
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
   astro: ^1.6.11
@@ -16,6 +17,7 @@ specifiers:
 dependencies:
   '@astrojs/image': 0.11.6
   '@astrojs/react': 1.2.2_cn3ejhfta5lq2dae4xucvtkwvu
+  '@emailjs/browser': 3.10.0
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.9
   astro: 1.6.11_sass@1.56.1
@@ -402,6 +404,11 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+    dev: false
+
+  /@emailjs/browser/3.10.0:
+    resolution: {integrity: sha512-pregUOBkSjjctQoAgn8DcSaeY4ypHjXAJEzWlJysM3RkQXw1ulavfHva3YYeAkxfJ7qbIhpyvRmhyQlgNG4GVg==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /@emmetio/abbreviation/2.2.3:
